@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash2">
+
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.launcher.pandabox.controller.fragments.homeFragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homefragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+        <action
+            android:id="@+id/action_homefragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminselectfragment"
+        android:name="com.launcher.pandabox.controller.fragments.AdminSelectFragment"
+        android:label="fragment_admin_select"
+        tools:layout="@layout/fragment_admin_select" >
+        <action
+            android:id="@+id/action_adminselectfragment_to_deviceNameFragment"
+            app:destination="@id/deviceNameFragment" />
+        <action
+            android:id="@+id/action_adminselectfragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceNameFragment"
+        android:name="com.launcher.pandabox.controller.fragments.DeviceNameFragment"
+        android:label="fragment_device_name"
+        tools:layout="@layout/fragment_device_name" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.launcher.pandabox.controller.fragments.passwordFragments.PasswordFragment"
+        android:label="fragment_password"
+
+        tools:layout="@layout/fragment_password" >
+
+        <action
+            android:id="@+id/action_passwordFragment_to_confirmPassword"
+            app:destination="@id/confirmPassword" />
+        <action
+            android:id="@+id/action_passwordFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_passwordFragment_to_parentFragment"
+            app:destination="@id/parentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allAppsFragment"
+        android:name="com.launcher.pandabox.controller.fragments.allAppsFragment.AllAppsFragment"
+        android:label="fragment_all_apps"
+        tools:layout="@layout/fragment_all_apps" >
+        <action
+            android:id="@+id/action_allAppsFragment_to_homefragment"
+            app:destination="@id/homefragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash2"
+        android:name="com.launcher.pandabox.controller.fragments.Splash"
+        android:label="Splash" >
+        <action
+            android:id="@+id/action_splash2_to_homefragment"
+            app:destination="@id/homefragment" />
+        <action
+            android:id="@+id/action_splash2_to_adminselectfragment"
+            app:destination="@id/adminselectfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPassword"
+        android:name="com.launcher.pandabox.controller.fragments.passwordFragments.ConfirmPassword"
+        android:label="ConfirmPassword" >
+        <action
+            android:id="@+id/action_confirmPassword_to_allAppsFragment"
+            app:destination="@id/allAppsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.launcher.pandabox.controller.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/parentFragment"
+        android:name="com.launcher.pandabox.controller.fragments.parentFragment.ParentFragment"
+        android:label="fragment_parent"
+        tools:layout="@layout/fragment_parent" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.launcher.pandabox.controller.fragments.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+
+
+</navigation>
